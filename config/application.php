@@ -83,6 +83,11 @@ Config::define('DISALLOW_FILE_EDIT', true);
 Config::define('DISALLOW_FILE_MODS', true);
 
 /**
+ * Disable Gutenberg Editor
+ */
+Config::define('OXBOOT_DISABLE_GUTENBERG', env('OXBOOT_DISABLE_GUTENBERG') ?: false);
+
+/**
  * Debugging Settings
  */
 Config::define('WP_DEBUG_DISPLAY', false);
