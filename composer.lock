@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c63d6f9d1722fe0d281f62420c0c8c3",
+    "content-hash": "ce5b69df66e760bd4bf3366dc0843d32",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -728,6 +728,55 @@
             "time": "2017-07-17T20:41:59+00:00"
         },
         {
+            "name": "oxboot/controller",
+            "version": "v1.0.0-alpha4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oxboot/controller.git",
+                "reference": "86de935cc77a323d6c80696e9bca514d393b76ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oxboot/controller/zipball/86de935cc77a323d6c80696e9bca514d393b76ad",
+                "reference": "86de935cc77a323d6c80696e9bca514d393b76ad",
+                "shasum": ""
+            },
+            "require": {
+                "brain/hierarchy": "^2.4.0",
+                "composer/installers": "^1.0",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.2"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Oxboot\\Controller\\": "src/"
+                },
+                "files": [
+                    "controller.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Darren Jacoby",
+                    "email": "darren@jacoby.co.za",
+                    "homepage": "https://github.com/darrenjacoby"
+                }
+            ],
+            "description": "WordPress package to enable a basic controller when using Blade with Sage 9",
+            "homepage": "https://github.com/oxboot/controller/",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2019-01-20T23:47:30+00:00"
+        },
+        {
             "name": "psr/container",
             "version": "1.0.0",
             "source": {
@@ -1115,55 +1164,6 @@
                 "wordpress wp bcrypt password"
             ],
             "time": "2016-03-01T16:27:06+00:00"
-        },
-        {
-            "name": "soberwp/controller",
-            "version": "2.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/soberwp/controller.git",
-                "reference": "76a4181e2ceb47232cb5fe0062512ce97b543bf5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/soberwp/controller/zipball/76a4181e2ceb47232cb5fe0062512ce97b543bf5",
-                "reference": "76a4181e2ceb47232cb5fe0062512ce97b543bf5",
-                "shasum": ""
-            },
-            "require": {
-                "brain/hierarchy": "^2.4.0",
-                "composer/installers": "^1.0",
-                "php": ">=5.6.0"
-            },
-            "require-dev": {
-                "squizlabs/php_codesniffer": "^3.2"
-            },
-            "type": "package",
-            "autoload": {
-                "psr-4": {
-                    "Sober\\Controller\\": "src/"
-                },
-                "files": [
-                    "controller.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Darren Jacoby",
-                    "email": "darren@jacoby.co.za",
-                    "homepage": "https://github.com/darrenjacoby"
-                }
-            ],
-            "description": "WordPress package to enable a basic controller when using Blade with Sage 9",
-            "homepage": "https://github.com/soberwp",
-            "keywords": [
-                "wordpress"
-            ],
-            "time": "2018-12-11T14:02:52+00:00"
         },
         {
             "name": "symfony/contracts",
@@ -1770,6 +1770,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "oxboot/controller": 15,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,

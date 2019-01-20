@@ -35,6 +35,11 @@ if (version_compare('4.7.0', get_bloginfo('version'), '>=')) {
 }
 
 /**
+ * Require Soberwp Controller
+ */
+require $root_dir . '/vendor/oxboot/controller/controller.php';
+
+/**
  * Oxboot required files
  *
  * The mapped array determines the code library included in your theme.

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use Sober\Controller\Controller;
+use Oxboot\Controller\Controller;
 
 class FrontPage extends Controller
 {

@@ -1,10 +1,10 @@
 # Application
-web/app/plugins/*
-!web/app/plugins/.gitkeep
-web/app/mu-plugins/*/
-web/app/upgrade
-web/app/uploads/*
-!web/app/uploads/.gitkeep
+web/content/plugins/*
+!web/content/plugins/.gitkeep
+web/content/mu-plugins/*/
+web/content/upgrade
+web/content/uploads/*
+!web/content/uploads/.gitkeep
 
 # WordPress
 web/wp
