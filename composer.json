@@ -1,9 +1,9 @@
 {
-  "name": "roots/bedrock",
+  "name": "oxboot/oxboot",
   "type": "project",
   "license": "MIT",
   "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
-  "homepage": "https://roots.io/bedrock/",
+  "homepage": "https://oxboot.com/",
   "authors": [
     {
       "name": "Scott Walkinshaw",
@@ -14,14 +14,18 @@
       "name": "Ben Word",
       "email": "ben@benword.com",
       "homepage": "https://github.com/retlehs"
+    },
+    {
+      "name": "Zorca Orcinus",
+      "email": "vs@zorca.org",
+      "homepage": "https://github.com/zorca"
     }
   ],
   "keywords": [
-    "bedrock", "composer", "roots", "wordpress", "wp", "wp-config"
+    "oxboot", "bedrock", "composer", "roots", "wordpress", "wp", "wp-config"
   ],
   "support": {
-    "issues": "https://github.com/roots/bedrock/issues",
-    "forum": "https://discourse.roots.io/category/bedrock"
+    "issues": "https://github.com/oxboot/oxboot/issues"
   },
   "config": {
     "preferred-install": "dist"
