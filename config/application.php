@@ -36,6 +36,12 @@ if (file_exists($root_dir . '/.env')) {
  */
 define('WP_ENV', env('WP_ENV') ?: 'production');
 
+
+/**
+ * Default theme
+ */
+Config::define('WP_DEFAULT_THEME', env('WP_DEFAULT_THEME') ?: 'theme');
+
 /**
  * URLs
  */

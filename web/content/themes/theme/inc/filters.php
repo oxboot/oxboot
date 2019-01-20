@@ -30,7 +30,7 @@ add_filter('body_class', function (array $classes) {
  * Add "… Continued" to the excerpt
  */
 add_filter('excerpt_more', function () {
-    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'theme') . '</a>';
 });
 
 /**
@@ -57,7 +57,7 @@ add_filter('template_include', function ($template) {
         });
     });
     $data = collect(get_body_class())->reduce(function ($data, $class) use ($template) {
-        return apply_filters("sage/template/{$class}/data", $data, $template);
+        return apply_filters("oxboot/template/{$class}/data", $data, $template);
     }, []);
     if ($template) {
         echo template($template, $data);
@@ -77,7 +77,7 @@ add_filter('comments_template', function ($comments_template) {
     );
 
     $data = collect(get_body_class())->reduce(function ($data, $class) use ($comments_template) {
-        return apply_filters("sage/template/{$class}/data", $data, $comments_template);
+        return apply_filters("oxboot/template/{$class}/data", $data, $comments_template);
     }, []);
 
     $theme_template = locate_template(["views/{$comments_template}", $comments_template]);

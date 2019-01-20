@@ -11,8 +11,8 @@ use Roots\Sage\Template\BladeProvider;
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
-    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+    wp_enqueue_style('theme/main.css', asset_path('styles/main.css'), false, null);
+    wp_enqueue_script('theme/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -44,7 +44,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'theme')
     ]);
 
     /**
@@ -97,7 +97,7 @@ add_action('widgets_init', function () {
  * Note: updated value is only available for subsequently loaded views, such as partials
  */
 add_action('the_post', function ($post) {
-    sage('blade')->share('post', $post);
+    oxboot('blade')->share('post', $post);
 });
 
 /**
@@ -107,14 +107,14 @@ add_action('after_setup_theme', function () {
     /**
      * Add JsonManifest to Sage container
      */
-    sage()->singleton('sage.assets', function () {
+    oxboot()->singleton('oxboot.assets', function () {
         return new JsonManifest(config('assets.manifest'), config('assets.uri'));
     });
 
     /**
      * Add Blade to Sage container
      */
-    sage()->singleton('sage.blade', function (Container $app) {
+    oxboot()->singleton('oxboot.blade', function (Container $app) {
         $cachePath = config('view.compiled');
         if (!file_exists($cachePath)) {
             wp_mkdir_p($cachePath);
@@ -126,7 +126,7 @@ add_action('after_setup_theme', function () {
     /**
      * Create @asset() Blade directive
      */
-    sage('blade')->compiler()->directive('asset', function ($asset) {
+    oxboot('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });

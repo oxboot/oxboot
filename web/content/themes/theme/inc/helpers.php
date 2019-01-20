@@ -12,7 +12,7 @@ use Roots\Sage\Container;
  * @param Container $container
  * @return Container|mixed
  */
-function sage($abstract = null, $parameters = [], Container $container = null)
+function oxboot($abstract = null, $parameters = [], Container $container = null)
 {
     $container = $container ?: Container::getInstance();
     if (!$abstract) {
@@ -20,7 +20,7 @@ function sage($abstract = null, $parameters = [], Container $container = null)
     }
     return $container->bound($abstract)
         ? $container->makeWith($abstract, $parameters)
-        : $container->makeWith("sage.{$abstract}", $parameters);
+        : $container->makeWith("oxboot.{$abstract}", $parameters);
 }
 
 /**
@@ -37,12 +37,12 @@ function sage($abstract = null, $parameters = [], Container $container = null)
 function config($key = null, $default = null)
 {
     if (is_null($key)) {
-        return sage('config');
+        return oxboot('config');
     }
     if (is_array($key)) {
-        return sage('config')->set($key);
+        return oxboot('config')->set($key);
     }
-    return sage('config')->get($key, $default);
+    return oxboot('config')->get($key, $default);
 }
 
 /**
@@ -52,7 +52,7 @@ function config($key = null, $default = null)
  */
 function template($file, $data = [])
 {
-    return sage('blade')->render($file, $data);
+    return oxboot('blade')->render($file, $data);
 }
 
 /**
@@ -63,7 +63,7 @@ function template($file, $data = [])
  */
 function template_path($file, $data = [])
 {
-    return sage('blade')->compiledPath($file, $data);
+    return oxboot('blade')->compiledPath($file, $data);
 }
 
 /**
@@ -72,7 +72,7 @@ function template_path($file, $data = [])
  */
 function asset_path($asset)
 {
-    return sage('assets')->getUri($asset);
+    return oxboot('assets')->getUri($asset);
 }
 
 /**
@@ -81,7 +81,7 @@ function asset_path($asset)
  */
 function filter_templates($templates)
 {
-    $paths = apply_filters('sage/filter_templates/paths', [
+    $paths = apply_filters('oxboot/filter_templates/paths', [
         'views',
         'resources/views'
     ]);
@@ -133,6 +133,6 @@ function locate_template($templates)
 function display_sidebar()
 {
     static $display;
-    isset($display) || $display = apply_filters('sage/display_sidebar', false);
+    isset($display) || $display = apply_filters('oxboot/display_sidebar', false);
     return $display;
 }
