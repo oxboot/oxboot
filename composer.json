@@ -65,11 +65,9 @@
       "web/content/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "web/wp",
-    "extra": {
-      "exclude-from-files": [
-        "oxboot/controller/controller.php"
-      ]
-    }
+    "exclude-from-files": [
+      "oxboot/controller/controller.php"
+    ]
   },
   "scripts": {
     "post-root-package-install": [
