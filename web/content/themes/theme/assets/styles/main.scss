@@ -1,8 +1,5 @@
 @import "common/variables";
 
-/** Import everything from autoload */
-@import "./autoload/**/*";
-
 /**
  * Import npm dependencies
  *
@@ -10,6 +7,7 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
+@import "~bootstrap/scss/bootstrap";
 
 /** Import theme styles */
 @import "common/global";
