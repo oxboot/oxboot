@@ -1895,16 +1895,16 @@
             "time": "2017-04-25T02:31:25+00:00"
         },
         {
-            "name": "wpackagist-plugin/akismet",
-            "version": "4.1.1",
+            "name": "wpackagist-plugin/query-monitor",
+            "version": "3.3.3",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/akismet/",
-                "reference": "tags/4.1.1"
+                "url": "https://plugins.svn.wordpress.org/query-monitor/",
+                "reference": "tags/3.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/akismet.4.1.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.3.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1912,7 +1912,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/akismet/"
+            "homepage": "https://wordpress.org/plugins/query-monitor/"
         }
     ],
     "packages-dev": [

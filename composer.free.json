@@ -6,6 +6,6 @@
     }
   ],
   "require": {
-    "wpackagist-plugin/akismet":"^4.0.0"
+    "wpackagist-plugin/query-monitor":"^3.3.3"
   }
 }
