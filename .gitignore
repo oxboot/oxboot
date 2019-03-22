@@ -24,3 +24,4 @@ wp-cli.local.yml
 # Node
 node_modules/
 web/content/themes/theme/dist/
+web/content/db.php
